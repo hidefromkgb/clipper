@@ -3,7 +3,7 @@
 if exist clipper.obj del clipper.obj
 if exist clipper.exe del clipper.exe
 
-rc.exe .\res\data.rc
+rc.exe ./res/data.rc
 ml.exe /c /coff clipper.asm
 if errorlevel 1 goto errasm
 

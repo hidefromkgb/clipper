@@ -1,5 +1,7 @@
 @echo off
 
+taskkill /F /IM clipper.exe
+
 if exist clipper.obj del clipper.obj
 if exist clipper.exe del clipper.exe
 

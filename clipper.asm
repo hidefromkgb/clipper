@@ -15,52 +15,57 @@ include c:/masm32/include/windows.inc;
   Process32Next             equ  DWORD PTR [PRC + 4*0007];
   CreateToolhelp32Snapshot  equ  DWORD PTR [PRC + 4*0008];
   GetModuleHandleA          equ  DWORD PTR [PRC + 4*0009];
-  SetCapture                equ  DWORD PTR [PRC + 4*0010];
-  CreateWindowExA           equ  DWORD PTR [PRC + 4*0011];
-  GetWindowRect             equ  DWORD PTR [PRC + 4*0012];
-  GetWindowThreadProcessId  equ  DWORD PTR [PRC + 4*0013];
-  SendMessageA              equ  DWORD PTR [PRC + 4*0014];
-  RegisterHotKey            equ  DWORD PTR [PRC + 4*0015];
-  SetWindowPos              equ  DWORD PTR [PRC + 4*0016];
-  MapDialogRect             equ  DWORD PTR [PRC + 4*0017];
-  MessageBoxIndirectA       equ  DWORD PTR [PRC + 4*0018];
-  ModifyMenuA               equ  DWORD PTR [PRC + 4*0019];
-  GetClientRect             equ  DWORD PTR [PRC + 4*0020];
-  UnhookWindowsHookEx       equ  DWORD PTR [PRC + 4*0021];
-  IsWindow                  equ  DWORD PTR [PRC + 4*0022];
-  SetForegroundWindow       equ  DWORD PTR [PRC + 4*0023];
-  EnableWindow              equ  DWORD PTR [PRC + 4*0024];
-  TrackPopupMenuEx          equ  DWORD PTR [PRC + 4*0025];
-  ShowWindow                equ  DWORD PTR [PRC + 4*0026];
-  SetMenuDefaultItem        equ  DWORD PTR [PRC + 4*0027];
-  CallNextHookEx            equ  DWORD PTR [PRC + 4*0028];
-  LoadCursorA               equ  DWORD PTR [PRC + 4*0029];
-  ClientToScreen            equ  DWORD PTR [PRC + 4*0030];
-  GetDlgItem                equ  DWORD PTR [PRC + 4*0031];
-  GetCapture                equ  DWORD PTR [PRC + 4*0032];
-  SetCursor                 equ  DWORD PTR [PRC + 4*0033];
-  SetWinEventHook           equ  DWORD PTR [PRC + 4*0034];
-  GetClassNameA             equ  DWORD PTR [PRC + 4*0035];
-  ReleaseCapture            equ  DWORD PTR [PRC + 4*0036];
-  SendDlgItemMessageA       equ  DWORD PTR [PRC + 4*0037];
-  DialogBoxIndirectParamA   equ  DWORD PTR [PRC + 4*0038];
-  CreatePopupMenu           equ  DWORD PTR [PRC + 4*0039];
-  UnregisterHotKey          equ  DWORD PTR [PRC + 4*0040];
-  GetForegroundWindow       equ  DWORD PTR [PRC + 4*0041];
-  GetParent                 equ  DWORD PTR [PRC + 4*0042];
-  AppendMenuA               equ  DWORD PTR [PRC + 4*0043];
-  CreateCursor              equ  DWORD PTR [PRC + 4*0044];
-  ClipCursor                equ  DWORD PTR [PRC + 4*0045];
-  UnhookWinEvent            equ  DWORD PTR [PRC + 4*0046];
-  GetCursorPos              equ  DWORD PTR [PRC + 4*0047];
-  LoadIconA                 equ  DWORD PTR [PRC + 4*0048];
-  IsWindowVisible           equ  DWORD PTR [PRC + 4*0049];
-  SetWindowsHookExA         equ  DWORD PTR [PRC + 4*0050];
-  EndDialog                 equ  DWORD PTR [PRC + 4*0051];
-  WindowFromPoint           equ  DWORD PTR [PRC + 4*0052];
-  Shell_NotifyIconA         equ  DWORD PTR [PRC + 4*0053];
+  ScreenToClient            equ  DWORD PTR [PRC + 4*0010];
+  SetCapture                equ  DWORD PTR [PRC + 4*0011];
+  CreateWindowExA           equ  DWORD PTR [PRC + 4*0012];
+  SetWindowLongA            equ  DWORD PTR [PRC + 4*0013];
+  GetWindowRect             equ  DWORD PTR [PRC + 4*0014];
+  GetWindowThreadProcessId  equ  DWORD PTR [PRC + 4*0015];
+  SendMessageA              equ  DWORD PTR [PRC + 4*0016];
+  RegisterHotKey            equ  DWORD PTR [PRC + 4*0017];
+  SetWindowPos              equ  DWORD PTR [PRC + 4*0018];
+  MapDialogRect             equ  DWORD PTR [PRC + 4*0019];
+  MessageBoxIndirectA       equ  DWORD PTR [PRC + 4*0020];
+  ModifyMenuA               equ  DWORD PTR [PRC + 4*0021];
+  GetClientRect             equ  DWORD PTR [PRC + 4*0022];
+  UnhookWindowsHookEx       equ  DWORD PTR [PRC + 4*0023];
+  IsWindow                  equ  DWORD PTR [PRC + 4*0024];
+  SetForegroundWindow       equ  DWORD PTR [PRC + 4*0025];
+  EnableWindow              equ  DWORD PTR [PRC + 4*0026];
+  TrackPopupMenuEx          equ  DWORD PTR [PRC + 4*0027];
+  ShowWindow                equ  DWORD PTR [PRC + 4*0028];
+  SetMenuDefaultItem        equ  DWORD PTR [PRC + 4*0029];
+  CallNextHookEx            equ  DWORD PTR [PRC + 4*0030];
+  LoadCursorA               equ  DWORD PTR [PRC + 4*0031];
+  ClientToScreen            equ  DWORD PTR [PRC + 4*0032];
+  GetDlgItem                equ  DWORD PTR [PRC + 4*0033];
+  GetCapture                equ  DWORD PTR [PRC + 4*0034];
+  SetCursor                 equ  DWORD PTR [PRC + 4*0035];
+  SetWinEventHook           equ  DWORD PTR [PRC + 4*0036];
+  GetClassNameA             equ  DWORD PTR [PRC + 4*0037];
+  ReleaseCapture            equ  DWORD PTR [PRC + 4*0038];
+  SendDlgItemMessageA       equ  DWORD PTR [PRC + 4*0039];
+  DialogBoxIndirectParamA   equ  DWORD PTR [PRC + 4*0040];
+  CreatePopupMenu           equ  DWORD PTR [PRC + 4*0041];
+  GetMessagePos             equ  DWORD PTR [PRC + 4*0042];
+  UnregisterHotKey          equ  DWORD PTR [PRC + 4*0043];
+  GetForegroundWindow       equ  DWORD PTR [PRC + 4*0044];
+  GetParent                 equ  DWORD PTR [PRC + 4*0045];
+  GetWindowLongA            equ  DWORD PTR [PRC + 4*0046];
+  AppendMenuA               equ  DWORD PTR [PRC + 4*0047];
+  CreateCursor              equ  DWORD PTR [PRC + 4*0048];
+  ClipCursor                equ  DWORD PTR [PRC + 4*0049];
+  UnhookWinEvent            equ  DWORD PTR [PRC + 4*0050];
+  GetCursorPos              equ  DWORD PTR [PRC + 4*0051];
+  LoadIconA                 equ  DWORD PTR [PRC + 4*0052];
+  IsWindowVisible           equ  DWORD PTR [PRC + 4*0053];
+  CallWindowProcA           equ  DWORD PTR [PRC + 4*0054];
+  SetWindowsHookExA         equ  DWORD PTR [PRC + 4*0055];
+  EndDialog                 equ  DWORD PTR [PRC + 4*0056];
+  WindowFromPoint           equ  DWORD PTR [PRC + 4*0057];
+  Shell_NotifyIconA         equ  DWORD PTR [PRC + 4*0058];
 
-  TBL_SIZE equ 54;
+  TBL_SIZE equ 60;
   API_MULT equ 07AA1h;
   API_PLUS equ 02408h;
 
@@ -70,15 +75,15 @@ include c:/masm32/include/windows.inc;
   TXT_ACTV equ 82;
   TXT_DEAC equ 104;
 
-  IDC_STNG equ 19;
+  IDC_TREE equ 19;
   IDC_DONE equ 20;
 
   IDC_CLAS equ 21;  <-- these three need to have powers of 2 in the low nibble
   IDC_CAPT equ 22;
   IDC_PROC equ 24;
 
-  IDC_CBRE equ 25;
-  IDC_BTRE equ 26;
+  IDC_CBME equ 25;
+  IDC_BTME equ 26;
   IDC_BTGH equ 27;
   IDC_BTED equ 28;
 
@@ -128,12 +133,12 @@ include c:/masm32/include/windows.inc;
          0D5D3h;
   @@:
       DB "USER32", 0, (@F - $)/2;
-      DW 01610h, 01682h, 01C4Eh, 0241Ch, 025D0h, 02A49h, 02AF6h, 02EE4h,
-         03219h, 043B6h, 051F5h, 05445h, 05F14h, 060B7h, 062DFh, 0631Bh,
-         06729h, 06885h, 06F79h, 07AF7h, 07CF2h, 08DF6h, 09A84h, 09A92h,
-         09C45h, 0A740h, 0A865h, 0AA6Eh, 0AC55h, 0AE15h, 0B99Ch, 0B9ABh,
-         0BAF2h, 0C526h, 0C872h, 0CA56h, 0CDB4h, 0D170h, 0D912h, 0DF9Ah,
-         0FD6Eh, 0FE2Fh, 0FF4Eh;
+      DW 001F2h, 01610h, 01682h, 01A45h, 01C4Eh, 0241Ch, 025D0h, 02A49h,
+         02AF6h, 02EE4h, 03219h, 043B6h, 051F5h, 05445h, 05F14h, 060B7h,
+         062DFh, 0631Bh, 06729h, 06885h, 06F79h, 07AF7h, 07CF2h, 08DF6h,
+         09A84h, 09A92h, 09C45h, 0A740h, 0A865h, 0AA6Eh, 0AC55h, 0AE15h,
+         0B33Fh, 0B99Ch, 0B9ABh, 0BAF2h, 0C0B9h, 0C526h, 0C872h, 0CA56h,
+         0CDB4h, 0D170h, 0D912h, 0DF9Ah, 0EE81h, 0FD6Eh, 0FE2Fh, 0FF4Eh;
   @@:
   SHE DB "shell32.dll", 0, (@F - $)/2;
       DW 05A02h;
@@ -141,8 +146,9 @@ include c:/masm32/include/windows.inc;
       DB 0;
   CTL DB "COMCTL32", 0;
 
-  button DB "BUTTON", 0;
-  static DB "STATIC", 0;
+  treeview DB "SysTreeView32", 0;
+  static   DB "STATIC", 0;
+  button   DB "BUTTON", 0;
 
   texthelp DB "This is a program that allows you to lock the cursor", 10;
            DB "in any window you like. Useful for restricting cursor", 10;
@@ -160,7 +166,6 @@ include c:/masm32/include/windows.inc;
   version  DB "clipper, v0.6", 0;
   pointer  DB "Pick a window", 0;
   active   DB "Current active window", 0;
-  settings DB "Settings", 0;
   escape   DB "[Esc] to cancel", 0;
   memorize DB "Memorize!", 0;
   gethelp  DB "Help", 0;
@@ -485,11 +490,14 @@ CreateControl proc sCls: DWORD, sCap: DWORD, dims: DWORD, dDID: DWORD,
   PUSH sCap;
 
   PUSH OFFSET static;
+  PUSH 0; or WS_EX_STATICEDGE;
   CMP sCls, 0;
   JE @F;
-    MOV DWORD PTR [ESP], OFFSET button;
+    MOV DWORD PTR [ESP + 4], OFFSET button;
+  JG @F;
+    MOV DWORD PTR [ESP + 4], OFFSET treeview;
+    OR DWORD PTR [ESP], WS_EX_CLIENTEDGE;
   @@:
-  PUSH 0; or WS_EX_STATICEDGE;
   CALL CreateWindowExA;
 
   POP EDX;
@@ -520,6 +528,91 @@ endm;
 
 
 
+AddItemToTree proc prev: DWORD, text: DWORD, flag: DWORD;
+
+  PUSH ESI;
+  PUSH EDI;
+  PUSH EBX;
+  MOV EDI, WMD;
+  MOV ESI, SendDlgItemMessageA;
+  XOR EBX, EBX;
+  LEA EAX, [EBX + 2];
+  CMP prev, EBX;
+  JNE @F;
+    DEC EAX;
+  @@:
+  PUSH EAX;                      <-- item.lParam
+  PUSH EBX;                      <-- item.cChildren
+  PUSH EBX;                      <-- item.iSelectedImage
+  PUSH EBX;                      <-- item.iImage
+  PUSH EBX;                      <-- item.cchTextMax
+  PUSH OFFSET BUF;               <-- item.pszText
+
+  PUSH DWORD PTR [ESP];
+  PUSH SIZEOF(PROCESSENTRY32);
+  PUSH WM_GETTEXT;
+  PUSH text;
+  PUSH EDI;
+  CALL ESI;
+
+  MOV EAX, EBX;
+  CMP prev, EBX;
+  JE @F;
+    PUSH EBX;
+    PUSH EBX;
+    PUSH BM_GETCHECK;
+    PUSH flag;
+    PUSH EDI;
+    CALL ESI;
+    SHL EAX, 12;
+  @@:
+  LEA ECX, [EAX + 1000h];
+
+  PUSH TVIS_STATEIMAGEMASK;      <-- item.stateMask
+  PUSH ECX;                      <-- item.state
+  PUSH EBX;                      <-- item.hItem
+  PUSH TVIF_TEXT or TVIF_STATE;  <-- item.mask
+  PUSH TVI_LAST;                 <-- hInsertAfter
+  PUSH prev;                     <-- hParent
+
+  PUSH ESP;
+  PUSH EBX;
+  PUSH TVM_INSERTITEM;
+  PUSH IDC_TREE;
+  PUSH EDI;
+  CALL ESI;
+  POP EBX;
+  POP EDI;
+  POP ESI;
+  RET;
+
+AddItemToTree endp;
+
+
+
+EditProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
+
+  PUSH GWLP_USERDATA;
+  PUSH hWnd;
+  CALL GetWindowLongA;
+
+  PUSH lPrm;
+  PUSH wPrm;
+  PUSH uMsg;
+  PUSH hWnd;
+  PUSH EAX;
+  CALL CallWindowProcA;
+
+  CMP uMsg, WM_GETDLGCODE;
+  JNE @F;
+    OR EAX, DLGC_WANTALLKEYS;
+  @@:
+  RET;
+
+EditProc endp;
+
+
+
 DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
 
   XOR EBX, EBX;  <-- for some weird reason on all versions of Windows and WINE
@@ -527,6 +620,8 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
   MOV ECX, uMsg;
   CMP ECX, WM_CLOSE;
   JE @WM_CLOSE;
+  CMP ECX, WM_NOTIFY;
+  JE @WM_NOTIFY;
   CMP ECX, WM_COMMAND;
   JE @WM_COMMAND;
   CMP ECX, WM_LBUTTONUP;
@@ -537,8 +632,12 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
   JE @WMC_TRAY;
   CMP ECX, WM_INITDIALOG;
   JE @WM_INITDIALOG;
-  @EXIT:
+  @EXIT_FALSE:
     XOR EAX, EAX;
+    RET;
+  @EXIT_TRUE:
+    XOR EAX, EAX;
+    INC EAX;
     RET;
 
   @WM_INITDIALOG:
@@ -589,11 +688,16 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     control ESI, 1, OFFSET pointer,  04023C3Bh, EBX, \
         BS_GROUPBOX or WS_VISIBLE or BS_CENTER;
     control ESI, 1, OFFSET active,   4402983Bh, EBX, BS_GROUPBOX or WS_VISIBLE;
-    control ESI, 1, OFFSET settings, 043FD83Bh, IDC_STNG, BS_GROUPBOX;
+    control ESI, -1, EBX, 44429838h, IDC_TREE, TVS_INFOTIP or TVS_LINESATROOT \
+        or TVS_HASLINES or TVS_NOHSCROLL or TVS_EDITLABELS or TVS_HASBUTTONS;
+    PUSH WS_CHILD or TVS_CHECKBOXES or TVS_INFOTIP or TVS_LINESATROOT \
+         or TVS_HASLINES or TVS_NOHSCROLL or TVS_EDITLABELS or TVS_HASBUTTONS;
+    PUSH GWL_STYLE;
+    PUSH EAX;
+    CALL SetWindowLongA;
 
-    control ESI, 1, OFFSET memorize, 080B360Ah, IDC_CBRE, \
-        WS_VISIBLE or WS_TABSTOP or BS_VCENTER or BS_FLAT or BS_AUTOCHECKBOX \
-        or WS_DISABLED;
+    control ESI, 1, OFFSET memorize, 080B360Ah, IDC_CBME, BS_AUTOCHECKBOX \
+        or BS_VCENTER or BS_FLAT or WS_VISIBLE or WS_TABSTOP or WS_DISABLED;
     control ESI, EBX, OFFSET escape, 06313809h, IDC_DONE, \
         WS_VISIBLE or SS_NOTIFY or SS_CENTERIMAGE or SS_CENTER;
     control ESI, EBX, EBX,           0615381Ch, IDC_DONE, \
@@ -611,7 +715,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
         WS_VISIBLE or WS_TABSTOP or BS_VCENTER or BS_FLAT or BS_AUTOCHECKBOX;
     control ESI, 1, OFFSET process,  481F320Ah, IDC_PROC, \
         WS_VISIBLE or WS_TABSTOP or BS_VCENTER or BS_FLAT or BS_AUTOCHECKBOX;
-    control ESI, 1, OFFSET memorize, 482B300Eh, IDC_BTRE, \
+    control ESI, 1, OFFSET memorize, 482B300Eh, IDC_BTME, \
         WS_VISIBLE or WS_TABSTOP or BS_VCENTER or BS_FLAT or BS_PUSHBUTTON \
         or WS_DISABLED;
     control ESI, 1, OFFSET gethelp,  782B300Eh, IDC_BTGH, \
@@ -627,22 +731,21 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     control ESI, EBX, EBX, 7A1F5E0Ah, TXT_PROC, \
         WS_VISIBLE or SS_CENTERIMAGE or SS_PATHELLIPSIS;
 
-    POP ESI;
-
     PUSH VK_ESCAPE;
     PUSH MOD_WIN;
     PUSH MNU_CLIP;
     PUSH hWnd;
     CALL RegisterHotKey;
     invoke WCBTHook, EBX, EVENT_SYSTEM_FOREGROUND, hWnd, EBX, EBX, EBX, EBX;
-    JMP @EXIT;
+    POP ESI;
+    JMP @EXIT_FALSE;
 
   @WMC_TRAY:
     MOV ECX, lPrm;
     CMP CX, WM_RBUTTONDOWN;
     JE @F;
     CMP CX, WM_LBUTTONDOWN;
-    JNE @EXIT;
+    JNE @EXIT_FALSE;
     @@:
     PUSH EBX;
     MOV EAX, hWnd;
@@ -656,7 +759,70 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     PUSH TPM_CENTERALIGN or TPM_RIGHTBUTTON;
     PUSH MTC;
     CALL TrackPopupMenuEx;
-    JMP @EXIT;
+    JMP @EXIT_FALSE;
+
+  @WM_NOTIFY:
+    CMP wPrm, IDC_TREE;
+    JNE @EXIT_FALSE;
+    MOV EBX, lPrm;
+    CMP (NMHDR PTR [EBX]).code, TVN_ENDLABELEDIT;
+    JNE @F;
+      PUSH 1;
+      PUSH DWLP_MSGRESULT;
+      PUSH hWnd;
+      CALL SetWindowLongA;
+      JMP @EXIT_TRUE;
+    @@:
+    CMP (NMHDR PTR [EBX]).code, TVN_BEGINLABELEDIT;
+    JNE @F;
+      PUSH 0;
+      PUSH 0;
+      PUSH TVM_GETEDITCONTROL;
+      PUSH IDC_TREE;
+      PUSH hWnd;
+      CALL SendDlgItemMessageA;
+      MOV EBX, EAX;
+      PUSH GWL_WNDPROC;
+      PUSH EBX;
+      CALL GetWindowLongA;
+      PUSH EAX;
+      PUSH GWLP_USERDATA
+      PUSH EBX;
+      CALL SetWindowLongA;
+      PUSH EditProc;
+      PUSH GWL_WNDPROC;
+      PUSH EBX;
+      CALL SetWindowLongA;
+      JMP @EXIT_TRUE;
+    @@:
+    CMP (NMHDR PTR [EBX]).code, NM_CLICK;
+    JNE @EXIT_FALSE;
+      CALL GetMessagePos;
+      PUSH 0;
+      PUSH 0;
+      MOVZX EDX, AX;
+      SHR EAX, 16;
+      PUSH EAX;
+      PUSH EDX;
+
+      PUSH ESP;
+      PUSH (NMHDR PTR [EBX]).hwndFrom;
+      CALL ScreenToClient;
+
+      PUSH ESP;
+      PUSH 0;
+      PUSH TVM_HITTEST;
+      PUSH (NMHDR PTR [EBX]).hwndFrom;
+      CALL SendMessageA;
+
+      TEST (TVHITTESTINFO PTR [ESP]).flags, TVHT_ONITEMSTATEICON;
+      JE @EXIT_FALSE;
+      PUSH (TVHITTESTINFO PTR [ESP]).hItem;
+      PUSH TVGN_CARET;
+      PUSH TVM_SELECTITEM;
+      PUSH (NMHDR PTR [EBX]).hwndFrom;
+      CALL SendMessageA;
+    JMP @EXIT_TRUE;
 
   @WM_HOTKEY:
     MOV ECX, wPrm;
@@ -664,12 +830,12 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     JNE @F;
       invoke Uncapture, hWnd;
       invoke ShowOrHide, hWnd;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, MNU_CLIP;
-    JNE @EXIT;
+    JNE @EXIT_FALSE;
       CMP EBX, WCL;
-    JE @EXIT;
+    JE @EXIT_FALSE;
       MOV ESI, OFFSET HLM;
       MOV EDI, DWORD PTR [ESI];
       TEST EDI, EDI;
@@ -685,7 +851,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     JE @F;
       CALL GetCapture;
       CMP EAX, hWnd;
-      JNE @EXIT;
+      JNE @EXIT_FALSE;
       invoke Uncapture, hWnd;
       MOVSX EDX, AX;
       SAR EAX, 16;
@@ -709,7 +875,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     TEST EDI, EDI;
     JNE @fail;
     CMP EBX, hWnd;
-    JE @EXIT;
+    JE @EXIT_FALSE;
 
       MOV WCL, EBX;
       MOV EDI, OFFSET RCT;
@@ -736,7 +902,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       PUSH EAX;
       CALL EBX;
       invoke TrayMenuModify, TXT_ACTV, NIM_MODIFY;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
 
     @fail:
     invoke TrayMenuModify, TXT_DEAC, NIM_MODIFY;
@@ -748,12 +914,21 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
     PUSH EAX;
     PUSH EAX;
     CALL ClipHook;
-    JMP @EXIT;
+    JMP @EXIT_FALSE;
 
   @WM_CLOSE:
     MOV wPrm, MNU_SHOW;
   @WM_COMMAND:
     MOV ECX, wPrm;
+    CMP CL, IDC_BTME;
+    JNE @F;
+      invoke AddItemToTree, EBX, TXT_PROC, IDC_PROC;
+      MOV EBX, EAX;
+      invoke AddItemToTree, EBX, TXT_CLAS, IDC_CLAS;
+      invoke AddItemToTree, EBX, TXT_CAPT, IDC_CAPT;
+      invoke AddItemToTree, EBX, TXT_PROC, IDC_PROC;
+      JMP @EXIT_FALSE;
+    @@:
     CMP CL, IDC_BTGH;
     JNE @F;
       PUSH LANG_NEUTRAL;
@@ -768,7 +943,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       PUSH SIZEOF(MSGBOXPARAMSA);
       PUSH ESP;
       CALL MessageBoxIndirectA;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, IDC_CLAS;
     JE @F;
@@ -794,13 +969,13 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       AND STA, EBX;
       @btre:
       MOV EBX, STA;
-      invoke EnableControl, IDC_CBRE, EBX;
-      invoke EnableControl, IDC_BTRE, EBX;
-      JMP @EXIT;
+      invoke EnableControl, IDC_CBME, EBX;
+      invoke EnableControl, IDC_BTME, EBX;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, IDC_BTED;
     JNE @F;
-      PUSH IDC_STNG;
+      PUSH IDC_TREE;
       PUSH hWnd;
       CALL GetDlgItem;
       PUSH EAX;
@@ -835,7 +1010,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       CALL SetWindowPos;
 
       CALL ShowOrHide;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, IDC_DONE;
     JNE @F;
@@ -849,17 +1024,17 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       PUSH IDC_DONE;
       PUSH hWnd;
       CALL RegisterHotKey;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, MNU_CLIP;
     JE @WM_HOTKEY;
     CMP CL, MNU_SHOW;
     JNE @F;
       invoke ShowOrHide, hWnd;
-      JMP @EXIT;
+      JMP @EXIT_FALSE;
     @@:
     CMP CL, MNU_QUIT;
-    JNE @EXIT;
+    JNE @EXIT_FALSE;
       invoke TrayMenuModify, TXT_DEAC, NIM_DELETE;
       PUSH HWE;
       CALL UnhookWinEvent;
@@ -868,7 +1043,7 @@ DlgProc proc hWnd: DWORD, uMsg: DWORD, wPrm: DWORD, lPrm: DWORD;
       PUSH EBX;
       PUSH hWnd;
       CALL EndDialog;
-    JMP @EXIT;
+    JMP @EXIT_FALSE;
 
 DlgProc endp;
 
